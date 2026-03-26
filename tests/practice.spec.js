@@ -35,7 +35,7 @@ await page.goto('https://www.demoblaze.com/index.html');
         await expect(placeOrder).toBeVisible();
         console.log('Place order button is visible');
 
-    // await placeOrder.click();
+    await placeOrder.click();
 
     await page.close();
 
