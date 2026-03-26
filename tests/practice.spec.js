@@ -26,6 +26,15 @@ await page.goto('https://www.demoblaze.com/index.html');
         
     await addToCart.click();
 
+    const cart= await page.locator("//a[normalize-space()='Cart']")
+        await expect(cart).toBeVisible();
+
+    await cart.click();
+
+    const placeOrder = await page.locator("//button[normalize-space()='Place Order']")
+        await expect(placeOrder).toBeVisible();
+        console.log('Place order button is visible');
+
     await page.close();
 
 })
